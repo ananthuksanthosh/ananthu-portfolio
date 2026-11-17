@@ -1,0 +1,51 @@
+
+name: Portfolio CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate Static Portfolio
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Check required files
+        run: |
+          test -f index.html
+          test -f vercel.json
+          test -d assets
+          echo "Required portfolio files found."
+
+      - name: Validate HTML parsing
+        run: |
+          python - <<'PY'
+          from html.parser import HTMLParser
+          from pathlib import Path
+
+          class PortfolioParser(HTMLParser):
+              pass
+
+          html = Path("index.html").read_text(encoding="utf-8")
+          parser = PortfolioParser()
+          parser.feed(html)
+          parser.close()
+
+          print("HTML parsing completed successfully.")
+          PY
