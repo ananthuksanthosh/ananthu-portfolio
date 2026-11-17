@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ananthu K Santhosh | Cloud & DevOps</title>
+<meta name="description" content="Portfolio of Ananthu K Santhosh, Aspiring Cloud & DevOps Engineer and Cloud Security enthusiast.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%E2%98%81%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<meta property="og:title" content="Ananthu K Santhosh | Cloud & DevOps">
+<meta property="og:description" content="Portfolio of Ananthu K Santhosh, aspiring Cloud & DevOps Engineer and Cloud Security enthusiast.">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#FFFDF2;--yel:#FFF4A3;--ink:#080808;--bg:#fff;--grey:#F2F2F2;--mut:#777;--card:#F2F2F2;--ease:cubic-bezier(.2,.7,.2,1);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){color-scheme:light}}
+*,*::before,*::after{box-sizing:inherit}
+html{max-width:100%;overflow-x:hidden;scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;max-width:100%;overflow-wrap:break-word;font-family:'Space Grotesk',system-ui,sans-serif;background:var(--bg);color:var(--ink);overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+#bar{position:fixed;top:0;left:0;height:3px;background:var(--ink);width:0;z-index:60}
+nav{position:fixed;top:calc(16px + env(safe-area-inset-top,0px));left:50%;transform:translateX(-50%);z-index:50;background:var(--ink);border-radius:99px;padding:5px;display:flex;gap:2px;animation:fade 1s .3s both}
+nav a{color:#fff;font-size:14px;padding:9px 16px;border-radius:99px;transition:.3s var(--ease)}
+nav a:hover{background:#2a2a2a}nav a.on{background:#fff;color:var(--ink)}
+#mb{display:none;position:fixed;top:calc(14px + env(safe-area-inset-top,0px));right:16px;z-index:70;background:var(--ink);color:#fff;border:0;border-radius:99px;padding:11px 18px;font:inherit;font-size:14px}
+.hero{min-height:100vh;background:linear-gradient(180deg,var(--yel),var(--cream) 70%,#fff);background-size:100% 140%;animation:bg 9s ease-in-out infinite alternate;position:relative;overflow:hidden;padding:110px 5vw 30px;display:flex;flex-direction:column}
+@keyframes bg{to{background-position:0 100%}}
+.name{font-weight:700;font-size:clamp(30px,10vw,170px);line-height:.88;letter-spacing:-.05em;margin:0;text-transform:uppercase;white-space:nowrap;position:relative;z-index:1}
+.name span{display:inline-block;transform:translateY(110%);opacity:0;animation:up .9s var(--ease) forwards}
+.nm{overflow-y:clip;overflow-x:visible;display:block;padding:0 .08em .06em 0}
+@keyframes up{to{transform:none;opacity:1}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.portrait{position:absolute;left:50%;bottom:0;width:min(36vw,440px);aspect-ratio:3/4;transform:translateX(-50%);z-index:2;clip-path:inset(100% 0 0 0);animation:clip 1.2s .6s var(--ease) forwards}
+@keyframes clip{to{clip-path:inset(0)}}
+.ph{width:100%;height:100%;border-radius:200px 200px 0 0;background:linear-gradient(160deg,#e6e0c2,#c9c3a2);display:grid;place-items:center;font-size:clamp(60px,9vw,140px);font-weight:700;color:#fff;animation:float 6s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-10px)}}
+.row{display:flex;justify-content:space-between;gap:20px;margin-top:5vw;font-size:14px;line-height:1.5;position:relative;z-index:3;animation:fade 1s 1s both}
+.row p{max-width:290px;margin:0}.row .r{text-align:right}
+.kw{height:1.5em;overflow:hidden;font-weight:700;letter-spacing:.04em;margin-top:8px}
+.kw div{animation:kw 10s infinite}.kw i{display:block;height:1.5em;font-style:normal}
+@keyframes kw{0%,20%{transform:none}25%,45%{transform:translateY(-1.5em)}50%,70%{transform:translateY(-3em)}75%,95%{transform:translateY(-4.5em)}100%{transform:translateY(-6em)}}
+.foot{margin-top:auto;display:flex;justify-content:space-between;font-size:13px;z-index:3;padding-top:30px}
+section{padding:90px 5vw}
+.lab{font-size:13px;color:var(--mut);margin-bottom:14px}
+h2{font-size:clamp(32px,4.6vw,64px);line-height:1.02;letter-spacing:-.035em;margin:0 0 30px;font-weight:700}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:5vw;align-items:start}
+.about .pic{aspect-ratio:4/5;border-radius:24px;background:linear-gradient(160deg,#e6e0c2,#c9c3a2);display:grid;place-items:center;font-size:90px;color:#fff;font-weight:700}
+.about p{color:#333;line-height:1.65;font-size:15px;max-width:560px}
+.grid{display:grid;gap:14px}
+.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+.card{background:var(--card);border-radius:20px;padding:22px;transition:.35s var(--ease)}
+.card:hover{transform:translateY(-6px);background:var(--yel)}
+.ic{width:34px;height:34px;border-radius:50%;background:var(--yel);display:grid;place-items:center;margin-bottom:60px;font-size:15px;transition:.3s}
+.card:hover .ic{background:var(--ink);color:var(--yel)}
+.card h3{margin:0 0 8px;font-size:17px}.card p{margin:0;color:var(--mut);font-size:13.5px;line-height:1.5}
+.card:hover p{color:#333}
+.tag{display:inline-block;font-size:11px;border:1px solid #444;border-radius:99px;padding:3px 10px;margin:10px 6px 0 0;color:#ccc}
+.dark{background:var(--ink);color:#fff;border-radius:32px;margin:0 2vw;padding:70px 3vw}
+.dark h2{font-size:clamp(40px,7vw,110px)}
+.pc{background:#161616;border-radius:18px;overflow:hidden;transition:.4s var(--ease);display:flex;flex-direction:column}
+.pc:hover{transform:translateY(-8px) scale(1.01)}
+.th{aspect-ratio:16/10;overflow:hidden;background:linear-gradient(135deg,#2b2b2b,#101010)}
+.th div{height:100%;display:grid;place-items:center;font-size:34px;font-weight:700;color:var(--yel);transition:transform .6s var(--ease);letter-spacing:-.03em;text-align:center;padding:10px}
+.pc:hover .th div{transform:scale(1.12)}
+.pb{padding:18px}.pb small{color:#999;font-size:12px}.pb h3{margin:4px 0 8px;font-size:19px}.pb p{margin:0;color:#bbb;font-size:13.5px;line-height:1.55}
+.st{background:var(--yel);color:var(--ink);border-radius:99px;padding:2px 9px;font-size:11px;margin-left:8px;vertical-align:middle}
+.tk{overflow:hidden;margin:40px 0 0;border-block:1px solid #ddd;padding:18px 0}
+.tk div{display:flex;gap:44px;width:max-content;animation:tk 30s linear infinite;font-size:26px;font-weight:700;letter-spacing:-.02em}
+@keyframes tk{to{transform:translateX(-50%)}}
+.tl{border-left:2px solid var(--ink);padding-left:24px;margin-left:6px}
+.tl h3{margin:0}.tl p,.tl li{color:#444;font-size:14px;line-height:1.6}.tl .it{margin-bottom:34px}
+.faq{display:grid;grid-template-columns:1fr 1.4fr;gap:5vw}
+.q{border-radius:14px;background:var(--grey);margin-bottom:10px;overflow:hidden;transition:background .3s,color .3s}
+.q button{all:unset;box-sizing:border-box;width:100%;padding:18px 20px;display:flex;justify-content:space-between;font-size:15px;cursor:pointer;font-weight:500}
+.q svg{transition:transform .4s var(--ease)}
+.q .a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s var(--ease)}
+.q .a>div{overflow:hidden}.q .a p{margin:0;padding:0 20px 20px;font-size:14px;line-height:1.6;color:#bbb}
+.q.open{background:var(--ink);color:#fff}.q.open .a{grid-template-rows:1fr}.q.open svg{transform:rotate(180deg)}
+.cta{background:var(--yel);border-radius:32px;margin:0 2vw;text-align:center;padding:90px 5vw}
+.cta h2{font-size:clamp(34px,6vw,90px)}
+.btn{display:inline-flex;gap:10px;align-items:center;background:var(--ink);color:#fff;border-radius:99px;padding:14px 26px;font-size:15px;margin:6px;transition:.3s var(--ease)}
+.btn:hover{transform:translateY(-3px);background:#222}.btn .ar{transition:transform .3s}.btn:hover .ar{transform:translateX(5px)}
+.btn.w{background:#fff;color:var(--ink)}
+footer{padding:40px 5vw;display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;font-size:13px;color:var(--mut)}
+footer a{margin-right:18px;color:var(--ink)}
+#top{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));width:46px;height:46px;border-radius:50%;border:0;background:var(--ink);color:#fff;font-size:18px;opacity:0;pointer-events:none;transition:.3s;z-index:50}
+#top.s{opacity:1;pointer-events:auto}
+.rv{opacity:0;transform:translateY(34px);transition:opacity .8s var(--ease),transform .8s var(--ease);transition-delay:var(--d,0s)}
+.rv.in{opacity:1;transform:none}
+@media(max-width:900px){
+nav{display:none;flex-direction:column;border-radius:24px;top:calc(62px + env(safe-area-inset-top,0px));width:210px}
+nav.open{display:flex}#mb{display:block}
+.g3,.g4,.about,.faq{grid-template-columns:1fr 1fr}.about,.faq{grid-template-columns:1fr}
+.row{flex-direction:column}.row .r{text-align:left}
+.hero{min-height:90vh}
+.name{font-size:12vw}
+}
+@media(max-width:560px){.g3,.g4{grid-template-columns:1fr}section{padding:64px 5vw}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.name span,.rv{opacity:1;transform:none}.portrait{clip-path:none}}
+.vis{border-radius:28px;background:#080808;overflow:hidden;box-shadow:0 30px 60px -30px rgba(0,0,0,.45);position:sticky;top:90px}
+.vis svg{display:block;width:100%;height:auto}.vis text{font-family:'Space Grotesk',sans-serif}
+.vis .fl{animation:fl 6s ease-in-out infinite}.vis .f2{animation-delay:-2s}.vis .f3{animation-delay:-4s}
+@keyframes fl{50%{transform:translateY(-8px)}}
+.vis .glow{filter:drop-shadow(0 0 10px rgba(255,244,163,.4))}
+.vis .dash{stroke-dasharray:5 6;animation:dash 3s linear infinite}@keyframes dash{to{stroke-dashoffset:-44}}
+.pc{cursor:pointer}.pc:focus-visible{outline:3px solid var(--yel);outline-offset:3px}
+.md{position:fixed;inset:0;z-index:100;display:grid;place-items:center;padding:3vw;background:rgba(0,0,0,.6);opacity:0;visibility:hidden;transition:opacity .35s,visibility .35s}
+.md.open{opacity:1;visibility:visible}
+.mp{background:#fff;color:var(--ink);width:min(860px,100%);max-height:92vh;overflow-y:auto;border-radius:28px;padding:clamp(22px,4vw,48px);transform:translateY(30px) scale(.97);transition:transform .45s var(--ease);outline:0}
+.md.open .mp{transform:none}
+.mx{position:sticky;top:0;float:right;width:44px;height:44px;border-radius:50%;border:0;background:var(--ink);color:#fff;font-size:18px;cursor:pointer;z-index:2}
+.mp h3{font-size:clamp(26px,4vw,44px);letter-spacing:-.03em;margin:4px 0 6px;line-height:1.05}
+.mp h4{margin:26px 0 8px;font-size:13px;color:var(--mut);font-weight:500}
+.mp p,.mp li{font-size:15px;line-height:1.6;color:#333;margin:0}.mp ul{padding-left:20px;margin:0}
+.mp .tag{color:#333;border-color:#bbb;margin:0 6px 6px 0}
+.mb>*{opacity:0;transform:translateY(14px);transition:opacity .5s var(--ease),transform .5s var(--ease)}
+.md.open .mb>*{opacity:1;transform:none;transition-delay:calc(var(--i)*.06s + .15s)}
+.na,.un{color:var(--mut);font-size:14px;border:1px dashed #ccc;border-radius:14px;padding:14px 18px;display:inline-block}
+.tc{cursor:pointer;display:flex;flex-direction:column}.tc:hover{transform:translateY(-6px) scale(1.01)}.tc:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.vd{margin-top:auto;padding-top:22px;font-size:12px;font-weight:500}.vd span{display:inline-block;transition:transform .3s var(--ease)}.tc:hover .vd span{transform:translateX(5px)}
+.th-head{display:flex;align-items:center;gap:14px}.th-head .ic{margin:0;width:46px;height:46px;flex:none}.th-head small{color:var(--mut);font-size:12px;letter-spacing:.06em}
+.mp .tg h4{color:var(--ink);font-size:17px;font-weight:700;margin:0 0 6px}.lv{display:inline-block;background:var(--yel);border-radius:99px;font-size:11px;padding:3px 11px;margin-bottom:12px}
+.nt{background:var(--grey);border-radius:14px;padding:14px 18px;font-size:14px;line-height:1.55;color:#333}
+
+/* sizing and spacing system */
+:root{--side:clamp(20px,5vw,72px);--px:max(var(--side),calc((100vw - 1440px)/2))}
+section{padding-block:clamp(56px,7vw,104px);padding-inline:var(--px)}
+.hero{padding-inline:var(--px);min-height:clamp(560px,88vh,820px)}
+footer{padding-inline:var(--px)}
+.dark,.cta{margin-inline:auto;width:calc(100% - clamp(16px,4vw,48px));max-width:1440px}
+.dark{padding:clamp(40px,6vw,80px) clamp(18px,3.4vw,56px)}
+.cta{padding:clamp(56px,8vw,110px) clamp(20px,5vw,72px)}
+.name{font-size:clamp(40px,17vw,300px)}
+.name .nm{display:block;transform:none;opacity:1;animation:none}
+.hero .row{margin-top:clamp(28px,4vw,64px)}
+.hero .kw{font-size:clamp(18px,3vw,36px)!important;margin-top:clamp(24px,4vw,56px)!important}
+h2{font-size:clamp(30px,4.4vw,64px);margin-bottom:clamp(24px,3vw,40px)}
+.dark h2{font-size:clamp(42px,6.4vw,92px)}
+.cta h2{font-size:clamp(32px,5vw,72px)}
+.lab{font-size:clamp(11px,.9vw,13px)}
+.grid{gap:clamp(14px,1.5vw,22px)}
+.grid>*,.about>*,.faq>*{min-width:0}
+.card{padding:clamp(18px,1.8vw,24px)}
+.card h3{font-size:clamp(18px,1.5vw,21px)}
+.card p{font-size:clamp(13.5px,1vw,15px)}
+.ic{margin-bottom:clamp(24px,2.6vw,36px)}
+.th{aspect-ratio:16/9}.th div{font-size:clamp(22px,2.3vw,32px)}
+.pb{padding:clamp(16px,1.6vw,22px)}.pb h3{font-size:clamp(18px,1.5vw,21px)}.pb p{font-size:clamp(13.5px,1vw,15px)}
+.about{grid-template-columns:1.05fr .95fr;gap:clamp(32px,5vw,80px);align-items:center}
+.about p{font-size:clamp(15px,1.1vw,17px);max-width:600px}
+.vis{max-width:600px;width:100%;justify-self:end}
+.tl p,.tl li{font-size:clamp(14px,1.05vw,16px)}
+.q button{font-size:clamp(15px,1.1vw,17px)}
+.faq{grid-template-columns:1fr 1.4fr;gap:clamp(28px,5vw,80px)}
+.btn{font-size:clamp(14px,1vw,16px)}
+img,svg{max-width:100%}
+@media(max-width:900px){.about,.faq{grid-template-columns:1fr}.vis{position:static;justify-self:stretch;max-width:none}.hero{min-height:clamp(520px,80vh,700px)}}
+@media(max-width:560px){.dark{padding:36px 16px}.ic{margin-bottom:22px}}
+/* projects: warm yellow section, charcoal cards */
+#projects.dark{background:#FFF3A3;color:var(--ink)}
+#projects .pc{background:#171717;border:1px solid rgba(255,255,255,.06);box-shadow:0 14px 30px -18px rgba(0,0,0,.5)}
+#projects .pc:hover{border-color:rgba(255,242,166,.7);box-shadow:0 26px 46px -24px rgba(0,0,0,.65)}
+#projects .th{background:linear-gradient(135deg,#2b2b2b,#0f0f0f)}
+#projects .th div{color:#FFF2A6}
+#projects .pb h3{color:#FFF2A6}#projects .pb small{color:#9a9a9a}#projects .pb p{color:#D0D0D0}
+#projects .tag{background:#262626;border:1px solid #3a3a3a;color:#D0D0D0}
+#projects .st{background:#FFF2A6;color:#080808}
+#projects>p{color:#444!important}
+#projects .vd{display:block;margin-top:16px;padding-top:0;color:#FFF2A6}
+.th svg{width:100%;height:100%}.th svg text{font-family:'Space Grotesk',sans-serif}
+.th .dash{stroke-dasharray:4 5;animation:dash 2.4s linear infinite}
+.mp .btn{background:#FFF2A6;color:#080808}.mp .btn:hover{background:#ffe97a}
+.vis{background:#FFFDF2;box-shadow:0 24px 50px -30px rgba(0,0,0,.4)}.vis img{display:block;width:100%;height:auto;transition:transform .9s var(--ease)}.vis:hover img{transform:scale(1.03)}
+/* about: larger illustration */
+.about{grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);align-items:center}.about>div:first-child{max-width:580px}
+.vis{max-width:none;justify-self:stretch;position:static;background:none;padding:0;border-radius:0;box-shadow:none;overflow:visible}
+@media(max-width:900px){.about{grid-template-columns:1fr}}
+.tl p{margin:3px 0}.tl h3{margin:0 0 6px}.tl ul{margin:8px 0 0;padding-left:20px}
+</style></head><body>
+<div id="bar"></div>
+<button id="mb" aria-label="Menu">Menu</button>
+<nav id="nav" aria-label="Main"><a href="#home" class="on">Home</a><a href="#about">About</a><a href="#expertise">Expertise</a><a href="#projects">Projects</a><a href="#contact">Contact</a></nav>
+
+<header class="hero" id="home">
+<h1 class="name" aria-label="Ananthu K Santhosh"><span class="nm"><span style="animation-delay:.2s">Ananthu</span></span></h1>
+
+<div class="row"><p>Hello, I'm Ananthu K Santhosh. A Cloud and DevOps enthusiast passionate about building secure, scalable and reliable cloud infrastructure.</p>
+<p class="r">Aspiring Cloud &amp; DevOps Engineer | Cloud Security Enthusiast</p></div>
+<div class="kw" style="font-size:clamp(20px,4vw,44px);margin-top:6vw;position:relative;z-index:3"><div><i>ASPIRING CLOUD ENGINEER</i><i>ASPIRING DEVOPS ENGINEER</i><i>CLOUD SECURITY</i><i>INFRASTRUCTURE BUILDER</i><i>ASPIRING CLOUD ENGINEER</i></div></div>
+<div class="foot"><span>© Ananthu K Santhosh 2026</span><span>(Scroll down)</span></div>
+</header>
+
+<section id="about"><div class="about">
+<div><div class="lab rv">ABOUT ME</div><h2 class="rv">Building My Journey in Cloud &amp; Technology</h2>
+<p class="rv">I'm a final-year BCA student specializing in Cybersecurity at Marian College Kuttikkanam. My primary interests are Cloud Engineering and DevOps, with cybersecurity as an additional strength.</p>
+<p class="rv">I completed an 8-week, 240-hour internship at IPSR Solutions Ltd, working on Linux administration, AWS and Azure cloud security, infrastructure hardening and network monitoring.</p>
+<p class="rv">I also secured 3rd place among 264 participants in the IPSR Cloud Shift Challenge.</p>
+<p class="rv">I'm continuously developing my practical skills through cloud infrastructure, automation, networking and security projects. I'm currently looking for entry-level Cloud and DevOps opportunities.</p></div>
+<div class="vis rv" style="--d:.15s"><img src="assets/about-infographic.png" width="1400" height="933" alt="Infographic of Cloud and DevOps with AWS, Azure and GCP, Cybersecurity, and IoT and Embedded systems with ESP32" loading="lazy"></div>
+</div></section>
+
+<section id="expertise"><div class="lab rv">(Expertise)</div><h2 class="rv" style="max-width:900px">I Have the Skills to Build and Secure Infrastructure</h2>
+<div class="grid g3" id="skills"></div></section>
+
+<section class="dark" id="projects"><h2 class="rv">My Featured Projects</h2>
+<p class="rv" style="color:#999;max-width:480px;font-size:14px;margin:-10px 0 36px">Cloud, networking and security work from labs, coursework and my internship period.</p>
+<div class="grid g3" id="pj"></div></section>
+
+<section id="stack"><div class="lab rv">(Technology Stack)</div><h2 class="rv">Tools I Work With</h2>
+<div class="grid g3" id="tech"></div>
+<div class="tk" aria-hidden="true"><div id="tkr"></div></div></section>
+
+<section id="experience"><div class="lab rv">(Experience &amp; Education)</div><h2 class="rv">Where I've Learned</h2>
+<div class="tl">
+<div class="it rv"><h3>BCA, Cybersecurity Specialization</h3><p>Marian College Kuttikkanam (Autonomous)</p><p>2024 to 2027</p><p>CGPA: 7.73</p></div>
+<div class="it rv"><h3>Cybersecurity and Cloud Security Intern</h3><p>IPSR Solutions Ltd, Kottayam</p><p>May 2026 to June 2026</p><p>8 weeks, 240 hours</p><ul><li>Linux system administration</li><li>AWS and Azure security assessment</li><li>Cloud infrastructure hardening</li><li>Network activity monitoring</li><li>Secure configuration practices</li></ul></div></div></section>
+
+<section id="certs"><div class="lab rv">(Certifications &amp; Achievements)</div><h2 class="rv">Recognition</h2>
+<div class="grid g3">
+<div class="card rv"><div class="ic">★</div><h3>Cybersecurity Analyst Job Simulation</h3><p>Tata Consultancy Services (Forage), October 2026</p></div>
+<div class="card rv" style="--d:.1s"><div class="ic">◆</div><h3>Getting Started with OpenShift AI for Future Careers</h3><p>Webinar by Red Hat in association with IPSR Solutions Ltd, on AI and its future applications.</p></div>
+<div class="card rv" style="--d:.2s"><div class="ic">🏆</div><h3>3rd Place, Cloud Shift: Rewriting Infrastructure</h3><p>Issued by IPSR Solutions Ltd, May 2026. Placed 3rd among 264 participants in a competition covering Cloud Computing, DevOps and Cybersecurity, with a focus on AWS and Microsoft Azure.</p></div></div></section>
+
+<section id="faq"><div class="faq"><div><div class="lab rv">(FAQ)</div><h2 class="rv">Frequently Asked Questions</h2></div><div id="fq"></div></div></section>
+
+<section class="cta" id="contact"><h2 class="rv">Let's Build Something Secure Together</h2>
+<p class="rv">Kerala, India</p>
+<a class="btn" href="mailto:ananthuksanthosh2006@gmail.com">Email me <span class="ar">→</span></a>
+<a class="btn w" href="https://www.linkedin.com/in/ananthu-k-santhosh" target="_blank" rel="noopener">LinkedIn <span class="ar">↗</span></a>
+<a class="btn w" href="https://github.com/ananthuksanthosh" target="_blank" rel="noopener">GitHub <span class="ar">↗</span></a>
+<a class="btn w" href="Resume.pdf" download>Download Resume <span class="ar">↓</span></a></section>
+
+<footer><div><a href="#home">Home</a><a href="#about">About</a><a href="#projects">Projects</a><a href="#contact">Contact</a></div><span>© 2026 Ananthu K Santhosh</span></footer>
+<button id="top" aria-label="Back to top">↑</button>
+
+<script>
+const $=s=>document.querySelector(s);
+const skills=[["☁","Cloud Computing","AWS infrastructure and cloud services."],["🛡","Cloud Security","IAM, security hardening and configuration reviews."],["⚙","DevOps Foundations","Docker, Git, GitHub and foundational CI/CD. Foundational exposure."],["▤","Linux Administration","Linux servers and command-line operations."],["⇄","Networking","TCP/IP, subnetting, ACLs and network security."],["◉","Cybersecurity","Security testing, reconnaissance and monitoring."]];
+$('#skills').innerHTML=skills.map((s,i)=>`<div class="card rv" style="--d:${i*.08}s"><div class="ic">${s[0]}</div><h3>${s[1]}</h3><p>${s[2]}</p></div>`).join('');
+const pj=[["SecureOTA", "IoT Security + AWS Cloud Security", "Cloud-based OTA firmware security framework for IoT devices. Focus: secure firmware distribution, SHA-256 integrity checks, digital signatures and blocking unauthorized updates.", ["AWS", "SHA-256", "Digital signatures"], "In progress"], ["SYN RECON", "TCP SYN Reconnaissance & Service Enumeration", "Modular Python and Scapy tool for TCP SYN port discovery and service enumeration, with detectors for 13 protocols. Tested in a controlled Kali and Metasploitable 2 lab.", ["Python", "Scapy", "TCP/IP", "Kali Linux", "Nmap", "Wireshark"]], ["MEDOX", "Multi-Hospital Healthcare Management System", "Cloud-based platform with patient, doctor and admin portals, deployed on AWS with JWT authentication, Helmet, rate limiting and Fail2Ban security.", ["React.js", "Node.js", "MySQL", "AWS", "Nginx", "PM2"]], ["Enterprise Network Simulation", "Networking + Security", "GNS3 enterprise network with routing between segments, NAT, DHCP and an ACL-based firewall on a Cisco 7200 router.", ["GNS3", "Cisco 7200", "ACLs", "NAT", "DHCP"]], ["Dockerized To-Do App", "DevOps Foundations", "Flask To-Do web app containerized with a Dockerfile and Docker Compose for consistent, simple deployment.", ["Python", "Flask", "Docker", "Docker Compose"]],
+["IoT-Based Environmental Monitoring and Remote Control System","Internet of Things | ESP32 | Cloud Integration","ESP32 and DHT22 monitoring of temperature and humidity with remote LED control through Blynk IoT Cloud. Developed and tested as a simulated project in Wokwi; no physical hardware was used.",["ESP32","DHT22","Embedded C++","PlatformIO","Wokwi","Blynk IoT Cloud"],"Completed (simulated)","<span style=\"font-size:.6em;line-height:1.15\">IoT-Based Environmental Monitoring and Remote Control System</span>"]];
+$('#pj').innerHTML=pj.map((p,i)=>`<article class="pc rv" style="--d:${(i%3)*.1}s"><div class="th"><div>${p[5]||p[0]}</div></div><div class="pb"><small>${p[1]}</small><h3>${p[0]}${p[4]?`<span class="st">${p[4]}</span>`:''}</h3><p>${p[2]}</p>${p[3].map(t=>`<span class="tag">${t}</span>`).join('')}<span class="vd">Explore Project <span>→</span></span></div></article>`).join('');
+const ico=p=>`<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${p}</svg>`;
+const I={cloud:'<path d="M7 18a4 4 0 0 1 0-8 5 5 0 0 1 9.6-1A4.5 4.5 0 0 1 17 18z"/>',devops:'<path d="M4 12a8 8 0 0 1 14-5M20 12a8 8 0 0 1-14 5M18 3v4h-4M6 21v-4h4"/>',os:'<path d="M4 5h16v14H4zM8 10l3 2-3 2M13 15h4"/>',code:'<path d="M9 8l-5 4 5 4M15 8l5 4-5 4"/>',net:'<circle cx="12" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><path d="M12 7v5M12 12l-6 5M12 12l6 5"/>',sec:'<path d="M12 3l7 3v5c0 5-3 8-7 10-4-2-7-5-7-10V6z"/>',iot:'<rect x="7" y="7" width="10" height="10" rx="1"/><path d="M10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4"/>'};
+const T=[
+{t:"Cloud",i:"cloud",tags:["AWS","Microsoft Azure","Google Cloud Platform (GCP)"],g:[
+{n:"AWS",l:"Practical exposure (internship)",x:["IAM","EC2","VPC","S3","RDS","CloudTrail","KMS","Cloud Security","Infrastructure Configuration","Security Hardening"]},
+{n:"Microsoft Azure",l:"Practical exposure (internship)",x:["Azure Cloud Fundamentals","Azure Security","Cloud Infrastructure Concepts","Security Configuration"]},
+{n:"Google Cloud Platform",l:"Learning, no production experience",x:["GCP Cloud Fundamentals","Core Cloud Services","Cloud Infrastructure Concepts"]}],
+f:"Cloud infrastructure configuration, IAM, security hardening, monitoring and cloud architecture fundamentals.",
+note:"My practical AWS and Azure exposure comes from my internship at IPSR Solutions Ltd. GCP is something I'm learning, and I have no production experience with it."},
+{t:"DevOps",i:"devops",tags:["Docker","Git","GitHub","GitHub Actions","CI/CD","Containerization"],g:[
+{n:"Docker",l:"Hands-on (Dockerized Python To-Do app)",x:["Containerization","Docker Images","Docker Containers","Dockerfile fundamentals","Application packaging"]},
+{n:"Git & GitHub",l:"Foundational knowledge",x:["Version Control","Repository Management","Branching and Commits"]},
+{n:"GitHub Actions",l:"Foundational knowledge",x:["CI/CD fundamentals","Workflow concepts","Automation fundamentals"]}],
+f:"Packaging applications with containers and understanding version control and automation workflows.",
+note:"Docker has hands-on use in one project. Git, GitHub and GitHub Actions are foundational knowledge, not production pipelines."},
+{t:"Operating Systems",i:"os",tags:["Linux","Windows"],g:[
+{n:"Linux",l:"Practical (internship and labs)",x:["Linux Administration","File Permissions","User and Group Management","Process Management","Package Management","Shell Commands","Server Administration","Basic Troubleshooting"]},
+{n:"Windows",l:"Foundational knowledge",x:["Windows Administration Fundamentals","PowerShell","Command-Line Operations","System Configuration"]}],
+f:"Linux server administration and command-line work that supports cloud and security tasks."},
+{t:"Programming",i:"code",tags:["Python","Java"],g:[
+{n:"Python",l:"Hands-on (SYN RECON, Dockerized To-Do app)",x:["Scripting","Automation Fundamentals","Scapy","Network Reconnaissance","Python Application Development"]},
+{n:"Java",l:"Foundational knowledge",x:["Core Java","Object-Oriented Programming","Programming Fundamentals"]}],
+f:"Python for security tooling and automation basics, with Java as a programming foundation."},
+{t:"Networking",i:"net",tags:["TCP/IP","GNS3","Cisco IOS","Subnetting","ACLs","Firewall Configuration"],g:[
+{n:"Networking skills",l:"Practical lab work (GNS3 simulation, Cisco ACLs)",x:["OSI and TCP/IP models","IP Addressing","Subnetting","Routing Fundamentals","Network Segmentation","ACL Configuration","Cisco IOS","GNS3 Network Simulation","Network Troubleshooting","Wireshark Traffic Analysis"]}],
+f:"Designing segmented networks, enforcing access policy and analyzing traffic."},
+{t:"Cybersecurity",i:"sec",tags:["Kali Linux","Nmap","Wireshark","Burp Suite","Metasploit"],g:[
+{n:"Security skills",l:"Concepts and lab practice",x:["Network Reconnaissance","Vulnerability Assessment Fundamentals","Network Security","Web Application Security Testing","Security Hardening","Traffic Analysis","Ethical Hacking Lab Practice"]},
+{n:"Tools",l:"Used in lab environments",x:["Kali Linux","Nmap","Wireshark","Burp Suite","Metasploit","Nikto","Gobuster","Netdiscover","Aircrack-ng"]}],
+f:"Reconnaissance, traffic analysis and security hardening as an additional strength alongside cloud work.",
+note:"All testing activities are conducted in authorized lab environments."},
+{t:"IoT & Embedded Security",i:"iot",tags:["ESP32","MQTT","CoAP","Mosquitto","Binwalk","Firmware Security"],g:[
+{n:"IoT Fundamentals",l:"Studied concepts",x:["Internet of Things Architecture","IoT Device Communication","Embedded Systems Fundamentals","ESP32 Platform"]},
+{n:"IoT Communication Protocols",l:"Studied concepts",x:["MQTT","CoAP","BLE","Zigbee"]},
+{n:"IoT Security",l:"Studied concepts, planned for SecureOTA (in progress)",x:["MQTT Broker Security","Mosquitto Configuration","MQTT Authentication and ACL Concepts","TLS for MQTT","Firmware Security","Firmware Analysis using Binwalk","SHA-256 Integrity Verification","Secure OTA Update Concepts"]}],
+f:"Securing device communication and firmware updates, linked to my SecureOTA project.",
+note:"ESP32 is planned project hardware. I am not claiming a completed hardware implementation."}];
+$('#tech').innerHTML=T.map((c,i)=>`<div class="card tc rv" style="--d:${i*.06}s"><div class="ic">${ico(I[c.i])}</div><h3>${c.t}</h3><p>${c.tags.join(', ')}</p><span class="vd">View details <span>→</span></span></div>`).join('');
+const names="AWS,Azure,Docker,Git,GitHub Actions,Linux,Python,Java,GNS3,Cisco IOS,Kali,Nmap,Wireshark,Burp Suite,Metasploit,MQTT,CoAP,Mosquitto,Binwalk".split(',');
+$('#tkr').innerHTML=[...names,...names].map(n=>`<span>${n}</span>`).join('');
+const faq=[["Who is Ananthu K Santhosh?","A final-year BCA student (Cybersecurity specialization) at Marian College Kuttikkanam focused on Cloud Engineering, DevOps and Cloud Security."],["What are your main technical interests?","AWS cloud infrastructure, DevOps, cloud security, Linux administration and network security."],["What cloud platforms do you work with?","AWS and Microsoft Azure, including security assessment and hardening exposure from my internship."],["What projects have you developed?","SecureOTA (in progress), SYN RECON, MEDOX, an enterprise network simulation in GNS3 and a Dockerized Python to-do app."],["Do you have practical internship experience?","Yes. An 8-week, 240-hour Cybersecurity and Cloud Security internship at IPSR Solutions Ltd, Kottayam, in May and June 2026."],["Are you looking for entry-level Cloud or DevOps opportunities?","Yes. Reach me through the contact section below."]];
+const chev='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>';
+$('#fq').innerHTML=faq.map((f,i)=>`<div class="q rv${i?'':' open'}"><button aria-expanded="${!i}">${f[0]}${chev}</button><div class="a"><div><p>${f[1]}</p></div></div></div>`).join('');
+document.querySelectorAll('.q button').forEach(b=>b.onclick=()=>{const q=b.parentNode,o=q.classList.contains('open');document.querySelectorAll('.q').forEach(x=>{x.classList.remove('open');x.firstChild.setAttribute('aria-expanded',false)});if(!o){q.classList.add('open');b.setAttribute('aria-expanded',true)}});
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(e=>io.observe(e));
+const nav=$('#nav'),links=[...nav.querySelectorAll('a')];
+$('#mb').onclick=()=>nav.classList.toggle('open');
+links.forEach(a=>a.onclick=()=>nav.classList.remove('open'));
+const so=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)links.forEach(a=>a.classList.toggle('on',a.getAttribute('href')=='#'+x.target.id||(x.target.id=='expertise'&&0)))}),{rootMargin:'-45% 0px -50% 0px'});
+['home','about','expertise','projects','contact'].forEach(id=>so.observe($('#'+id)));
+addEventListener('scroll',()=>{const h=document.documentElement;$('#bar').style.width=scrollY/(h.scrollHeight-innerHeight)*100+'%';$('#top').classList.toggle('s',scrollY>600)},{passive:true});
+$('#top').onclick=()=>scrollTo({top:0});
+</script><script>
+const D=[{"t": "SecureOTA", "c": "IoT Security + AWS Cloud Security", "st": "In Progress", "o": "Design and implementation of a cloud-based over-the-air (OTA) firmware security framework for IoT devices, combining IoT security with AWS cloud security.", "g": "Distribute firmware to IoT devices securely and prevent unauthorized firmware updates.", "tech": ["AWS", "SHA-256", "Digital signatures"], "fh": "Project focus (work in progress, not all of this is built yet)", "f": ["Secure firmware distribution", "Firmware integrity verification with SHA-256 hashing", "Digital signatures", "Prevention of unauthorized firmware updates"], "r": "I am designing and implementing this framework as an ongoing project."}, {"t": "SYN RECON", "c": "TCP SYN Reconnaissance & Service Enumeration Tool", "o": "A lightweight, modular network reconnaissance tool developed with Python and Scapy. It performs TCP SYN-based port discovery, then service enumeration to identify the services running on the open ports it finds.", "g": "Build my own SYN scanner with service detection and compare its results with established tools.", "tech": ["Python", "Scapy", "TCP/IP", "Linux", "Kali Linux", "Nmap", "Wireshark"], "fh": "Key features", "f": ["TCP SYN-based reconnaissance and open-port discovery", "Common-port, specific-port, port-range and full TCP port scanning", "Concurrent scanning with configurable worker count and timeout", "Modular service detection using dedicated protocol detectors", "Generic TCP fallback detection for unsupported services", "Service identification through protocol-specific responses and banner detection where supported", "Scan statistics, response latency measurement and logging", "Command-line interface with configurable scan options"], "x": [["Supported service detection", "FTP, SSH, Telnet, SMTP, DNS, HTTP, HTTPS, SMB, MQTT, MySQL, PostgreSQL, VNC and Tomcat."], ["Lab environment", "Kali Linux and Metasploitable 2 for controlled network reconnaissance, with Nmap used for scan comparison and Wireshark for packet capture and traffic analysis."]], "learn": ["TCP/IP networking", "Packet crafting", "Network reconnaissance", "Service detection", "Modular Python development"], "r": "I developed the tool and tested it in a controlled lab. It was developed for cybersecurity education and authorized security testing.", "repo": "https://github.com/ananthuksanthosh/synrecon"}, {"t": "MEDOX", "c": "Multi-Hospital Healthcare Management System", "o": "A cloud-based Multi-Hospital Management System that streamlines healthcare operations through a centralized digital platform for patients, doctors and administrators. It covers patient registration, doctor management, appointment scheduling, prescriptions, medical records and administrative operations.", "g": "Provide one platform that manages healthcare operations across multiple hospitals, deployed on AWS with security built in.", "tech": ["React.js", "Node.js", "Express.js", "MySQL", "AWS", "Ubuntu", "Nginx", "PM2", "Git", "GitHub"], "fh": "Key features", "f": ["Patient, Doctor and Administrator portals", "Hospital and doctor management", "Online appointment booking and scheduling", "Prescription and medical records management", "Medical report uploads and document management", "Payment monitoring and reporting", "Dedicated Security Center for monitoring security events", "System Status Dashboard for infrastructure monitoring"], "x": [["Cloud infrastructure and deployment", ["Designed and deployed an AWS-based infrastructure using EC2 and VPC", "Configured public and private subnet architecture with Internet Gateway and NAT Gateway", "Integrated Amazon RDS MySQL and Amazon S3", "Configured Application Load Balancer and Security Groups", "Used CloudWatch for infrastructure monitoring", "Deployed application services using Ubuntu, Nginx and PM2"]], ["Security implementation", ["JWT-based authentication and bcrypt password hashing", "HTTP security headers using Helmet", "CORS configuration and rate limiting", "XSS protection and Fail2Ban server security"]], ["Timeline", "May 2026"]], "learn": ["Full-stack application development", "Cloud infrastructure deployment", "System administration", "Web application security"], "r": "I developed the application and designed and deployed its AWS infrastructure.", "repo": "https://github.com/ananthuksanthosh/medox-healthcare-platform"}, {"t": "Enterprise Network Simulation & Security", "c": "Networking + Security", "o": "An enterprise network simulation built in GNS3 to gain hands-on experience with real-world networking concepts and architecture. The network has multiple segments with routing between them, NAT for internet access, and DHCP for dynamic IP allocation.", "g": "Model an enterprise network and control access between its segments.", "tech": ["GNS3", "Cisco 7200", "Cisco IOS", "ACLs", "NAT", "DHCP", "Routing"], "fh": "Implementation details", "f": ["Multiple network segments with routing between them", "NAT for internet access", "DHCP for dynamic IP allocation", "ACL-based firewall on a Cisco 7200 router to control and restrict access between segments"], "learn": ["Network design", "Traffic flow", "Practical security implementation"], "r": "I designed the network and implemented the basic ACL-based security.", "repo": "https://github.com/ananthuksanthosh/enterprise-office-network-gns3"}, {"t": "Dockerized Python To-Do Application", "c": "DevOps Foundations", "o": "A simple Python To-Do web application built with Flask and containerized with Docker, to gain practical experience in application packaging and containerization.", "g": "Learn how containerization keeps application environments consistent and simplifies deployment across systems.", "tech": ["Python", "Flask", "Docker", "Docker Compose", "HTML", "CSS", "JavaScript", "Git", "GitHub"], "fh": "Key features", "f": ["Add new tasks", "View tasks", "Delete tasks", "Mark tasks as completed", "Docker configuration using a Dockerfile and Docker Compose to simplify build and deployment"], "learn": ["Docker and container management", "Python application deployment", "Foundational DevOps workflows"], "r": "I developed the Flask application and containerized it with Docker and Docker Compose.", "repo": "https://github.com/ananthuksanthosh/python-todo-docker"}, {"t": "IoT-Based Environmental Monitoring and Remote Control System", "c": "Internet of Things | ESP32 | Cloud Integration", "st": "Completed (simulated)", "o": "A hands-on IoT project connecting sensors, embedded systems and cloud platforms into a remotely accessible monitoring system, built with ESP32, a DHT22 sensor and Blynk IoT Cloud. It monitors temperature and humidity in real time and lets me switch an LED remotely from a web and mobile dashboard.", "g": "Monitor temperature and humidity in real time and control an LED remotely through the cloud.", "arch": "ESP32 → DHT22 sensor → Wi-Fi → Blynk IoT Cloud → web and mobile monitoring dashboard. The ESP32 reads the sensor and sends the data to Blynk over Wi-Fi, and the dashboard can send LED commands back to the ESP32.", "tech": ["ESP32", "DHT22 Sensor", "Embedded C++", "PlatformIO", "Visual Studio Code", "Wokwi Simulator", "Blynk IoT Cloud"], "fh": "Key features", "f": ["Real-time temperature monitoring using DHT22", "Real-time humidity monitoring", "Remote LED control through Blynk Cloud", "Web and mobile monitoring dashboard", "ESP32-to-cloud communication over Wi-Fi"], "impl": "Developed and tested as a virtual project using Wokwi without physical hardware. Firmware was developed with VS Code and PlatformIO, the ESP32 and sensor connections were simulated in Wokwi, and the system was integrated with Blynk Cloud.", "learn": ["ESP32 programming and sensor integration", "IoT device-to-cloud communication", "Wi-Fi connectivity and cloud integration", "Blynk virtual pins and event handling", "Hardware simulation using Wokwi", "Remote monitoring and device control"], "sim": "This was a simulated project. The ESP32 and DHT22 were simulated in Wokwi, and physical hardware was not used.", "r": "I developed the firmware and cloud integration and tested them in the simulator.", "link": "https://lnkd.in/p/ghtfRAQy"}];
+const md=document.createElement('div');md.className='md';md.setAttribute('aria-hidden','true');
+md.innerHTML='<div class="mp" role="dialog" aria-modal="true" aria-labelledby="mt" tabindex="-1"><button class="mx" aria-label="Close project details">✕</button><div class="mb"></div></div>';
+document.body.appendChild(md);
+const mp=md.firstChild,mbd=mp.querySelector('.mb'),mx=mp.querySelector('.mx');let last=null;
+const sec=(h,b)=>`<div><h4>${h}</h4>${b}</div>`;
+function openP(i,el){const d=D[i];last=el;
+const parts=[`<div><small style="color:var(--mut)">${d.c}</small>${d.st?`<br><span class="st" style="display:inline-block;margin:8px 0 0">${d.st}</span>`:''}<h3 id="mt">${d.t}</h3></div>`,
+sec('Overview',`<p>${d.o}</p>`),sec('Objective',`<p>${d.g}</p>`),...(d.arch?[sec('System architecture',`<p>${d.arch}</p>`)]:[]),
+sec('Technologies',d.tech.map(t=>`<span class="tag">${t}</span>`).join('')),
+sec(d.fh,`<ul>${d.f.map(x=>`<li>${x}</li>`).join('')}</ul>`),...(d.x||[]).map(e=>sec(e[0],Array.isArray(e[1])?`<ul>${e[1].map(i=>`<li>${i}</li>`).join('')}</ul>`:`<p>${e[1]}</p>`)),...(d.impl?[sec('Implementation process',`<p>${d.impl}</p>`)]:[]),...(d.learn?[sec('What I learned',`<ul>${d.learn.map(x=>`<li>${x}</li>`).join('')}</ul>`)]:[]),...(d.sim?[sec('Wokwi simulation details',`<p>${d.sim}</p>`)]:[]),sec('My role',`<p>${d.r}</p>`),
+sec('Screenshots & diagrams','<div class="na">No screenshots or architecture diagrams have been added yet.</div>'),
+sec('Links',d.link?`<a class="btn" href="${d.link}" target="_blank" rel="noopener">View Project on LinkedIn <span class="ar">↗</span></a>`:d.repo?`<a class="btn" href="${d.repo}" target="_blank" rel="noopener">GitHub repository <span class="ar">↗</span></a>`:'<span class="un">Repository link unavailable</span>')];
+mbd.innerHTML=parts.map((h,k)=>h.replace('<div>',`<div style="--i:${k}">`)).join('');
+mp.scrollTop=0;md.classList.add('open');md.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';setTimeout(()=>mx.focus(),50)}
+function closeP(){md.classList.remove('open');md.setAttribute('aria-hidden','true');document.body.style.overflow='';last&&last.focus()}
+document.querySelectorAll('#pj .pc').forEach((c,i)=>{c.tabIndex=0;c.setAttribute('role','button');c.setAttribute('aria-haspopup','dialog');c.setAttribute('aria-label','Open details: '+D[i].t);
+c.onclick=()=>openP(i,c);c.onkeydown=e=>{if(e.key=='Enter'||e.key==' '){e.preventDefault();openP(i,c)}}});
+mx.onclick=closeP;md.onclick=e=>{if(e.target===md)closeP()};
+addEventListener('keydown',e=>{if(!md.classList.contains('open'))return;if(e.key=='Escape')closeP();if(e.key=='Tab'){const f=[...mp.querySelectorAll('a,button')];const a=f[0],z=f[f.length-1];if(e.shiftKey&&document.activeElement==a||!f.includes(document.activeElement)){e.preventDefault();z.focus()}else if(!e.shiftKey&&document.activeElement==z){e.preventDefault();a.focus()}}});
+</script>
+<script>
+function openT(i,el){const c=T[i];last=el;const tg=x=>x.map(t=>`<span class="tag">${t}</span>`).join('');
+const parts=[`<div class="th-head"><div class="ic">${ico(I[c.i])}</div><div><small>TECHNOLOGIES</small><h3 id="mt" style="margin:0">${c.t}</h3></div></div>`,
+`<div class="tg"><h4>Core tools</h4>${tg(c.tags)}</div>`,
+...c.g.map(g=>`<div class="tg"><h4>${g.n}</h4><span class="lv">${g.l}</span><br>${tg(g.x)}</div>`),
+`<div class="tg"><h4>Practical focus</h4><p>${c.f}</p></div>`];
+if(c.note)parts.push(`<div class="nt">${c.note}</div>`);
+mbd.innerHTML=parts.map((h,k)=>h.replace(/^<div/,`<div style="--i:${k}"`)).join('');
+mp.scrollTop=0;md.classList.add('open');md.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';setTimeout(()=>mx.focus(),50)}
+document.querySelectorAll('#tech .tc').forEach((c,i)=>{c.tabIndex=0;c.setAttribute('role','button');c.setAttribute('aria-haspopup','dialog');c.setAttribute('aria-label','Open details: '+T[i].t);
+c.onclick=()=>openT(i,c);c.onkeydown=e=>{if(e.key=='Enter'||e.key==' '){e.preventDefault();openT(i,c)}}});
+setTimeout(()=>document.querySelectorAll('#tech .tc').forEach(c=>c.style.setProperty('--d','0s')),2500);
+</script>
+</body></html>
