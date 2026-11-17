@@ -184,6 +184,25 @@ img,svg{max-width:100%}
 .mp p,.mp li{font-size:clamp(15.5px,1.2vw,17px)}.mp h4{font-size:14px}.lv{font-size:12px}.nt{font-size:15.5px}
 .btn{font-size:clamp(15px,1.1vw,17px)}
 footer{font-size:14.5px}
+/* compact desktop scale */
+:root{--px:max(var(--side),calc((100vw - 1280px)/2))}
+.dark,.cta{max-width:1320px}
+section{padding-block:clamp(48px,5.5vw,84px)}
+.hero{min-height:clamp(520px,80vh,720px)}
+.name{font-size:clamp(40px,13.5vw,230px)}
+h2{font-size:clamp(28px,3.4vw,52px)}
+.dark h2{font-size:clamp(36px,5vw,72px)}
+.cta h2{font-size:clamp(30px,4vw,58px)}
+.hero .row{font-size:clamp(15px,1.2vw,19px)}
+.about p{font-size:clamp(15px,1.05vw,17px)}
+.card p,.pb p{font-size:clamp(14px,.95vw,16px)}
+.card h3,.pb h3{font-size:clamp(17px,1.3vw,20px)}
+.tl p,.tl li{font-size:clamp(14.5px,1vw,16.5px)}
+.q button{font-size:clamp(15px,1vw,17px)}.q .a p{font-size:clamp(14.5px,1vw,16px)}
+.mp p,.mp li{font-size:clamp(15px,1vw,16.5px)}
+.btn{font-size:clamp(14.5px,1vw,16px)}
+.th div{font-size:clamp(20px,2vw,28px)}
+@media(max-width:700px){.name{font-size:17vw}}
 </style></head><body>
 <div id="bar"></div>
 <button id="mb" aria-label="Menu">Menu</button>
