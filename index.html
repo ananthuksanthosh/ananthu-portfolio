@@ -217,6 +217,28 @@ h2{font-size:clamp(28px,3.4vw,52px)}
 .cfs{display:none;margin-top:14px;border-radius:14px;padding:14px 16px;font-size:15px;line-height:1.5}
 .cfs.ok{display:block;background:var(--ink);color:var(--yel)}.cfs.err{display:block;background:#fdecea;color:#7a1410;border:1px solid #f3b8b3}
 @media(max-width:560px){.cf .g2{grid-template-columns:1fr}}
+/* terminal */
+.term{max-width:1000px;margin:0 auto 0 0;background:#0f0f0f;border-radius:20px;overflow:hidden;box-shadow:0 30px 60px -32px rgba(0,0,0,.55);font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace;color:#d0d0d0}
+.tm-bar{display:flex;align-items:center;gap:7px;padding:12px 16px;background:#1a1a1a;border-bottom:1px solid #262626;font-size:13px;color:#999}
+.tm-bar i{width:11px;height:11px;border-radius:50%;background:#3a3a3a;display:block}.tm-bar i:first-child{background:#FFF4A3}.tm-bar span{margin-left:10px}
+.tm-chips{display:flex;flex-wrap:wrap;gap:8px;padding:12px 16px 0}
+.tm-chips button{background:transparent;color:#FFF4A3;border:1px solid #3a3a3a;border-radius:99px;padding:6px 14px;font:inherit;font-size:13px;cursor:pointer;transition:background .25s,color .25s,border-color .25s}
+.tm-chips button:hover,.tm-chips button:focus-visible{background:#FFF4A3;color:#080808;border-color:#FFF4A3;outline:0}
+.tm-body{height:clamp(320px,52vh,460px);overflow-y:auto;padding:16px;font-size:14px;line-height:1.6}
+.tm-line{white-space:pre-wrap;overflow-wrap:anywhere;margin-bottom:10px}
+.tm-line b{color:#fff}.tm-line a{color:#FFF4A3;text-decoration:underline;text-underline-offset:3px}.tm-line .p{color:#FFF4A3}
+.tm-row{display:flex;align-items:center;gap:8px;padding:12px 16px 16px;border-top:1px solid #262626;cursor:text}
+.tm-ps{color:#FFF4A3;font-size:14px;white-space:nowrap}
+.tm-in{flex:1;min-width:0;background:transparent;border:0;outline:0;color:#fff;font:inherit;font-size:14px;caret-color:#FFF4A3}
+@media(max-width:560px){.tm-in{font-size:16px}.tm-ps{font-size:12px}.tm-body{font-size:13px}}
+/* CLI toggle */
+.clib{position:fixed;left:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:50;background:var(--ink);color:#FFF4A3;border:0;border-radius:99px;padding:12px 18px;font:600 14px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;cursor:pointer;box-shadow:0 10px 24px -10px rgba(0,0,0,.5);transition:transform .3s var(--ease),background .3s}
+.clib:hover{transform:translateY(-3px);background:#222}.clib:focus-visible{outline:3px solid var(--yel);outline-offset:3px}
+.cli-ov{position:fixed;inset:0;z-index:110;display:grid;place-items:center;padding:3vw;background:rgba(0,0,0,.6);opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s}
+.cli-ov.open{opacity:1;visibility:visible}
+.cli-ov .term{width:min(960px,100%);max-width:none;margin:0;transform:translateY(24px) scale(.97);transition:transform .4s var(--ease)}
+.cli-ov.open .term{transform:none}.cli-ov .tm-body{height:min(60vh,520px)}
+.tm-x{margin-left:auto;background:transparent;border:1px solid #3a3a3a;color:#d0d0d0;border-radius:99px;padding:3px 12px;font:inherit;font-size:12px;cursor:pointer}.tm-x:hover,.tm-x:focus-visible{background:#FFF4A3;color:#080808;outline:0}
 </style></head><body>
 <div id="bar"></div>
 <button id="mb" aria-label="Menu">Menu</button>
@@ -251,6 +273,12 @@ h2{font-size:clamp(28px,3.4vw,52px)}
 <div class="grid g3" id="tech"></div>
 <div class="tk" aria-hidden="true"><div id="tkr"></div></div></section>
 
+<button type="button" class="clib" id="clib" aria-haspopup="dialog" aria-controls="cliov">&gt;_ CLI</button>
+<div class="cli-ov" id="cliov" aria-hidden="true"><div class="term" id="tm" role="dialog" aria-modal="true" aria-label="Interactive Linux-style terminal"><div class="tm-bar"><i></i><i></i><i></i><span>visitor@ananthu: portfolio</span><button type="button" class="tm-x" aria-label="Close terminal">close (esc)</button></div>
+<div class="tm-chips"><button type="button" data-c="help">help</button><button type="button" data-c="about">about</button><button type="button" data-c="skills">skills</button><button type="button" data-c="projects">projects</button><button type="button" data-c="experience">experience</button><button type="button" data-c="certs">certs</button><button type="button" data-c="contact">contact</button><button type="button" data-c="neofetch">neofetch</button></div>
+<div class="tm-body" role="log" aria-live="polite"></div>
+<label class="tm-row"><span class="tm-ps">visitor@ananthu:~$</span><input class="tm-in" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Terminal command input"></label></div></div>
+
 <section id="experience"><div class="lab rv">(Experience &amp; Education)</div><h2 class="rv">Where I've Learned</h2>
 <div class="tl">
 <div class="it rv"><h3>BCA, Cybersecurity Specialization</h3><p>Marian College Kuttikkanam (Autonomous)</p><p>2024 to 2027</p><p>CGPA: 7.73</p></div>
@@ -280,7 +308,7 @@ h2{font-size:clamp(28px,3.4vw,52px)}
 <div class="cfs" id="cfs" role="status" aria-live="polite"></div></form>
 </section>
 
-<footer><div><a href="#home">Home</a><a href="#about">About</a><a href="#projects">Projects</a><a href="#contact">Contact</a></div><span>© 2026 Ananthu K Santhosh</span></footer>
+<footer><div><a href="#home">Home</a><a href="#about">About</a><a href="#projects">Projects</a><a href="#" data-cli>CLI</a><a href="#contact">Contact</a></div><span>© 2026 Ananthu K Santhosh</span></footer>
 <button id="top" aria-label="Back to top">↑</button>
 
 <script>
@@ -398,6 +426,75 @@ if(r.ok){f.reset();Object.keys(rules).forEach(n=>{f.querySelector('[data-e="'+n+
 else{let m='Sorry, your message could not be sent. Please try again in a moment.';try{const j=await r.json();if(j.errors&&j.errors.length)m=j.errors.map(x=>x.message).join(' ')}catch(_){}show('err',m)}}
 catch(_){show('err','Could not send your message. Please check your internet connection and try again.')}
 finally{btn.disabled=false;btn.innerHTML=label;st.scrollIntoView({block:'nearest'})}});
+})();
+</script>
+<script>
+(()=>{const root=document.getElementById('tm');if(!root)return;
+const body=root.querySelector('.tm-body'),inp=root.querySelector('.tm-in'),ps=root.querySelector('.tm-ps');
+const E=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+const A=(u,t)=>`<a href="${u}" target="_blank" rel="noopener">${t||u}</a>`;
+const slugs=['securota','syn-recon','medox','enterprise-network','docker-todo','iot-monitoring'];
+const EMAIL='ananthuksanthosh2006@gmail.com',GH='https://github.com/ananthuksanthosh',LI='https://www.linkedin.com/in/ananthu-k-santhosh';
+let cwd='~',hist=[],hi=0;
+const out=h=>{const d=document.createElement('div');d.className='tm-line';d.innerHTML=h;body.appendChild(d);body.scrollTop=body.scrollHeight};
+const proj=i=>{const d=D[i];return [`<b>${d.t}</b>${d.st?' ['+d.st+']':''}`,'Category: '+d.c,'','Overview: '+d.o,'','Technologies: '+d.tech.join(', '),'',(d.fh||'Highlights')+':',...d.f.map(x=>'  - '+x),'',d.repo?'GitHub: '+A(d.repo):d.link?'Project link: '+A(d.link):'Repository: link unavailable'].join('\n')};
+const X={
+about:()=>"I'm a final-year BCA student specializing in Cybersecurity at Marian College Kuttikkanam. My primary interests are Cloud Engineering and DevOps, with cybersecurity as an additional strength.\n\nI completed an 8-week, 240-hour internship at IPSR Solutions Ltd, working on Linux administration, AWS and Azure cloud security, infrastructure hardening and network monitoring.\n\nI'm currently looking for entry-level Cloud and DevOps opportunities.",
+skills:()=>T.map(c=>'<b>'+E(c.t)+'</b>\n  '+c.tags.join(', ')).join('\n\n')+'\n\nTip: click a card in "Tools I Work With" to see practical vs foundational levels.',
+experience:()=>'<b>Cybersecurity and Cloud Security Intern</b>\nIPSR Solutions Ltd, Kottayam\nMay 2026 to June 2026 | 8 weeks, 240 hours\n  - Linux system administration\n  - AWS and Azure security assessment\n  - Cloud infrastructure hardening\n  - Network activity monitoring\n  - Secure configuration practices\nCertificate: '+A('https://lnkd.in/p/gMScfauM'),
+education:()=>'<b>BCA, Cybersecurity Specialization</b>\nMarian College Kuttikkanam (Autonomous)\n2024 to 2027\nCGPA: 7.73',
+certs:()=>['AI-Integrated Cloud, DevOps &amp; Cybersecurity course (IPSR Solutions Ltd)|https://lnkd.in/p/gFkAbwfw','Cybersecurity Analyst Job Simulation (TCS, Forage, Oct 2026)|https://lnkd.in/p/gPg24FzC','Getting Started with OpenShift AI for Future Careers (Red Hat webinar)|https://lnkd.in/p/ghVt9URh','Containers &amp; Kubernetes Made Easy with OpenShift (Red Hat, Jul 2026)|https://lnkd.in/p/gWAQdqnS','Automate IT the Smart Way with Ansible (Red Hat, May 2026)|https://www.linkedin.com/in/ananthuksanthosh/overlay/Certifications/1661825967/treasury/?profileId=ACoAAFnuODMBfHAaIFow6dtEzr8vP2mhuSuT4Ug'].map((x,i)=>{const [t,u]=x.split('|');return (i+1)+'. '+t+'\n   '+A(u,'view certificate')}).join('\n'),
+achievements:()=>['3rd Place, Cloud Shift: Rewriting Infrastructure (IPSR Solutions Ltd, May 2026, 264 participants)|https://lnkd.in/p/guk2g8mg|view certificate','Project Udaan: Industrial Visit to Adani Port, Trivandrum|https://lnkd.in/p/g6_ShVHY|view on LinkedIn'].map((x,i)=>{const [t,u,l]=x.split('|');return (i+1)+'. '+t+'\n   '+A(u,l)}).join('\n'),
+contact:()=>'Email:    '+A('mailto:'+EMAIL,EMAIL)+'\nLinkedIn: '+A(LI)+'\nGitHub:   '+A(GH)+'\nLocation: Kerala, India\n\nOr use the contact form below.'
+};
+const files={'about.txt':'about','skills.txt':'skills','experience.txt':'experience','education.txt':'education','certifications.txt':'certs','achievements.txt':'achievements','contact.txt':'contact'};
+function cat(a){a=(a||'').replace(/^(~\/|\.\/)/,'');if(!a)return 'cat: missing file name';
+if(a.startsWith('projects/')||cwd==='projects'){const n=a.replace(/^projects\//,'').replace(/\.txt$/,'');const i=slugs.indexOf(n);if(i>-1)return proj(i)}
+else if(files[a])return X[files[a]]();
+return 'cat: '+E(a)+': No such file or directory'}
+const setPs=()=>{ps.textContent='visitor@ananthu:'+(cwd==='~'?'~':'~/'+cwd)+'$'};
+const C={
+help:()=>['<b>Available commands</b>','  help              show this list','  whoami            who I am','  about             short bio','  skills            technology categories','  projects          list my projects','  project &lt;n&gt;      details of project n (1-6)','  experience        internship','  education         my course','  certs             certifications','  achievements      achievements','  contact           how to reach me','  resume            open my resume','  neofetch          system-style summary','  ls / cd / cat     browse files, e.g. cat about.txt','  pwd, date, echo, history, clear','','Tip: press Tab to autocomplete, arrow keys for history.'].join('\n'),
+whoami:()=>'Ananthu K Santhosh | Aspiring Cloud &amp; DevOps Engineer | Cloud Security Enthusiast',
+about:()=>X.about(),skills:()=>X.skills(),experience:()=>X.experience(),education:()=>X.education(),certs:()=>X.certs(),certifications:()=>X.certs(),achievements:()=>X.achievements(),contact:()=>X.contact(),
+projects:()=>D.map((d,i)=>(i+1)+'. <b>'+d.t+'</b>'+(d.st?' ['+d.st+']':'')+'\n   '+d.c).join('\n')+'\n\nType <b>project &lt;number&gt;</b> for details, e.g. project 2',
+project:a=>{a=(a||'').trim();let i=/^\d+$/.test(a)?+a-1:slugs.indexOf(a.replace(/\.txt$/,''));return i>=0&&i<D.length?proj(i):'Usage: project &lt;1-'+D.length+'&gt;'},
+resume:()=>{window.open('Resume.pdf','_blank');return 'Opening Resume.pdf ...'},
+links:()=>'GitHub:   '+A(GH)+'\nLinkedIn: '+A(LI),
+neofetch:()=>'<b>visitor@ananthu</b>\n------------------\nName:      Ananthu K Santhosh\nRole:      Aspiring Cloud &amp; DevOps Engineer\nFocus:     AWS, DevOps, Cloud Security\nAlso:      Cybersecurity, IoT Security\nEducation: BCA (Cybersecurity), Marian College Kuttikkanam\nLocation:  Kerala, India\nShell:     portfolio-sh 1.0',
+ls:()=>cwd==='~'?Object.keys(files).concat('projects/').join('  '):slugs.map(s=>s+'.txt').join('  '),
+cd:a=>{a=(a||'').trim().replace(/\/$/,'');if(!a||a==='~'||a==='..'||a==='/'){cwd='~';setPs();return null}if(a==='projects'&&cwd==='~'){cwd='projects';setPs();return null}return 'cd: '+E(a)+': No such file or directory'},
+cat:a=>cat(a),pwd:()=>cwd==='~'?'/home/visitor/portfolio':'/home/visitor/portfolio/projects',
+date:()=>new Date().toString(),echo:a=>E(a||''),history:()=>hist.map((h,i)=>(i+1)+'  '+E(h)).join('\n'),
+clear:()=>{body.innerHTML='';return null},
+sudo:()=>'visitor is not in the sudoers file. This incident will be reported.',
+exit:()=>{setTimeout(()=>{const x=document.querySelector('#cliov .tm-x');if(x)x.click()},350);return 'logout'}};
+function run(line){const raw=line.trim();out('<span class="p">'+E(ps.textContent)+'</span> '+E(raw));if(!raw)return;
+hist.push(raw);hi=hist.length;const parts=raw.split(/\s+/),cmd=parts[0].toLowerCase(),arg=parts.slice(1).join(' ');
+if(!Object.prototype.hasOwnProperty.call(C,cmd)){out('bash: '+E(parts[0])+': command not found. Type <b>help</b> for the list of commands.');return}
+const r=C[cmd](cmd==='ls'?'':arg);if(r!=null)out(r)}
+inp.addEventListener('keydown',e=>{
+if(e.key==='Enter'){const v=inp.value;inp.value='';run(v)}
+else if(e.key==='ArrowUp'){e.preventDefault();if(hi>0){hi--;inp.value=hist[hi]}}
+else if(e.key==='ArrowDown'){e.preventDefault();if(hi<hist.length-1){hi++;inp.value=hist[hi]}else{hi=hist.length;inp.value=''}}
+else if(e.key==='l'&&e.ctrlKey){e.preventDefault();body.innerHTML=''}
+else if(e.key==='Tab'){e.preventDefault();const p=inp.value.split(/\s+/),last=p[p.length-1];
+const pool=p.length===1?Object.keys(C):(p[0]==='cd'?['projects']:(cwd==='projects'?slugs.map(s=>s+'.txt'):Object.keys(files).concat('projects/')));
+const m=pool.filter(x=>x.startsWith(last));
+if(m.length===1){p[p.length-1]=m[0];inp.value=p.join(' ')+(p.length===1?' ':'')}else if(m.length>1)out(m.join('  '))}});
+root.querySelectorAll('.tm-chips button').forEach(b=>b.addEventListener('click',()=>run(b.dataset.c)));
+root.addEventListener('click',e=>{const t=e.target.tagName;if(t!=='A'&&t!=='BUTTON'&&!String(getSelection()))inp.focus({preventScroll:true})});
+setPs();out('Welcome to my portfolio terminal.\nType <b>help</b> to see the available commands, or tap a command above.');
+})();
+</script>
+<script>
+(()=>{const ov=document.getElementById('cliov'),b=document.getElementById('clib');if(!ov||!b)return;const inp=ov.querySelector('.tm-in');let last=null;
+const open=()=>{last=document.activeElement;ov.classList.add('open');ov.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';setTimeout(()=>inp.focus(),60)};
+const close=()=>{ov.classList.remove('open');ov.setAttribute('aria-hidden','true');document.body.style.overflow='';if(last&&last.focus)last.focus()};
+b.addEventListener('click',open);ov.querySelector('.tm-x').addEventListener('click',close);
+ov.addEventListener('click',e=>{if(e.target===ov)close()});
+addEventListener('keydown',e=>{if(e.key==='Escape'&&ov.classList.contains('open'))close()});
+document.querySelectorAll('[data-cli]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();open()}));
 })();
 </script>
 </body></html>
