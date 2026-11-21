@@ -242,6 +242,12 @@ h2{font-size:clamp(28px,3.4vw,52px)}
 .cli-ov .term{width:min(960px,100%);max-width:none;margin:0;transform:translateY(24px) scale(.97);transition:transform .4s var(--ease)}
 .cli-ov.open .term{transform:none}.cli-ov .tm-body{height:min(60vh,520px)}
 .tm-x{margin-left:auto;background:transparent;border:1px solid #3a3a3a;color:#d0d0d0;border-radius:99px;padding:3px 12px;font:inherit;font-size:12px;cursor:pointer}.tm-x:hover,.tm-x:focus-visible{background:#FFF4A3;color:#080808;outline:0}
+/* email chooser */
+.em{position:relative;display:inline-block}
+.emm{position:absolute;top:calc(100% + 8px);left:50%;transform:translate(-50%,-6px);min-width:230px;background:#fff;color:var(--ink);border-radius:16px;padding:8px;box-shadow:0 24px 50px -20px rgba(0,0,0,.45);text-align:left;z-index:20;opacity:0;visibility:hidden;transition:opacity .25s,transform .3s var(--ease),visibility .25s}
+.emm.open{opacity:1;visibility:visible;transform:translate(-50%,0)}
+.emm a,.emm button{display:block;width:100%;text-align:left;background:none;border:0;font:inherit;font-size:15px;color:var(--ink);padding:11px 14px;border-radius:10px;cursor:pointer}
+.emm a:hover,.emm button:hover,.emm a:focus-visible,.emm button:focus-visible{background:var(--yel);outline:0}
 </style></head><body>
 <div id="bar"></div>
 <button id="mb" aria-label="Menu">Menu</button>
@@ -297,7 +303,13 @@ h2{font-size:clamp(28px,3.4vw,52px)}
 
 <section class="cta" id="contact"><h2 class="rv">Let's Build Something Secure Together</h2>
 <p class="rv">Kerala, India</p>
-<a class="btn" href="mailto:ananthuksanthosh2006@gmail.com">Email me <span class="ar">→</span></a>
+<span class="em"><button type="button" class="btn" id="emb" aria-haspopup="menu" aria-expanded="false" aria-controls="emm" style="border:0;cursor:pointer;font-family:inherit">Email me <span class="ar">→</span></button>
+<div class="emm" id="emm" role="menu" aria-label="Choose how to send an email">
+<a role="menuitem" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=ananthuksanthosh2006%40gmail.com&amp;su=Portfolio%20enquiry" target="_blank" rel="noopener">Gmail</a>
+<a role="menuitem" href="https://outlook.live.com/mail/0/deeplink/compose?to=ananthuksanthosh2006%40gmail.com&amp;subject=Portfolio%20enquiry" target="_blank" rel="noopener">Outlook</a>
+<a role="menuitem" href="https://compose.mail.yahoo.com/?to=ananthuksanthosh2006%40gmail.com&amp;subject=Portfolio%20enquiry" target="_blank" rel="noopener">Yahoo Mail</a>
+<a role="menuitem" href="mailto:ananthuksanthosh2006@gmail.com?subject=Portfolio%20enquiry">Default email app</a>
+<button role="menuitem" type="button" id="emc">Copy email address</button></div></span>
 <a class="btn w" href="https://www.linkedin.com/in/ananthu-k-santhosh" target="_blank" rel="noopener">LinkedIn <span class="ar">↗</span></a>
 <a class="btn w" href="https://github.com/ananthuksanthosh" target="_blank" rel="noopener">GitHub <span class="ar">↗</span></a>
 <a class="btn w" href="Resume.pdf" target="_blank" rel="noopener">View Resume <span class="ar">↗</span></a>
@@ -499,6 +511,18 @@ b.addEventListener('click',open);ov.querySelector('.tm-x').addEventListener('cli
 ov.addEventListener('click',e=>{if(e.target===ov)close()});
 addEventListener('keydown',e=>{if(e.key==='Escape'&&ov.classList.contains('open'))close()});
 document.querySelectorAll('[data-cli]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();open()}));
+})();
+</script>
+<script>
+(()=>{const b=document.getElementById('emb'),m=document.getElementById('emm'),c=document.getElementById('emc');if(!b||!m)return;
+const set=o=>{m.classList.toggle('open',o);b.setAttribute('aria-expanded',String(o))};
+b.addEventListener('click',e=>{e.stopPropagation();set(!m.classList.contains('open'))});
+document.addEventListener('click',e=>{if(!m.contains(e.target))set(false)});
+addEventListener('keydown',e=>{if(e.key==='Escape'&&m.classList.contains('open')){set(false);b.focus()}});
+m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>set(false)));
+c.addEventListener('click',async()=>{const t='ananthuksanthosh2006@gmail.com';
+try{await navigator.clipboard.writeText(t)}catch(_){const i=document.createElement('input');i.value=t;document.body.appendChild(i);i.select();try{document.execCommand('copy')}catch(__){}i.remove()}
+c.textContent='Copied!';setTimeout(()=>{c.textContent='Copy email address';set(false)},1200)});
 })();
 </script>
 </body></html>
